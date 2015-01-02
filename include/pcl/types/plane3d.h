@@ -370,7 +370,7 @@ namespace pcl
         bool colorize_wrt_normals = false;
         if (colorize_wrt_normals)
           pcl::surface::makeNormalColors (*cloud_mesh);
-        pcl::toROSMsg (*cloud_mesh, mesh->cloud);
+        pcl::toPCLPointCloud2 (*cloud_mesh, mesh->cloud);
 
         bool smooth_mesh = true;
         if (smooth_mesh)

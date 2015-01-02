@@ -212,7 +212,7 @@ namespace pcl
 
     template<typename PointT> inline void getCloud (const pcl::PolygonMesh& mesh, pcl::PointCloud<PointT>& cloud)
     {
-      pcl::fromROSMsg (mesh.cloud, cloud);
+      pcl::fromPCLPointCloud2 (mesh.cloud, cloud);
     }
 
     inline float fast_exp (double number)

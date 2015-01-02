@@ -224,7 +224,7 @@ namespace pcl
               output_cloud->points[point_idx].rgb = cloud->points[clusters[i].indices[0]].rgb;
             mesh.polygons.push_back (polygon);
           }
-          pcl::toROSMsg (*output_cloud, mesh.cloud);
+          pcl::toPCLPointCloud2 (*output_cloud, mesh.cloud);
         }
 
       protected:
